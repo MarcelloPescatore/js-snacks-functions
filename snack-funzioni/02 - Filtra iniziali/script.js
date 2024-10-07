@@ -4,9 +4,22 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
+function myFunction(array, letter){
+    let result = [];
+    
+    for (let i = 0; i < array.length; i++){
+        if (array[i].startsWith(letter)){
+            result.push(array[i]);
+        }
+    }
 
+    return result;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+
+const namesWithA = myFunction(names, 'A');
+console.log(namesWithA);
 
 
 
