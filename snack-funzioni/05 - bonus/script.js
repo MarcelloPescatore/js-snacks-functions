@@ -9,10 +9,35 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+function myFunction(string){
+    const d = new Date();
+    let hour = d.getHours();
+    if (hour <= 13){
+        return `buongiorno ${string}`
+    } else if (hour > 13 && hour <= 17) {
+        return `buon pomeriggio ${string}`
+    } else {
+        return `buonasera ${string}`
+    }
+}
 
+let myFunctionArrow = (string) => {
+    const d = new Date();
+    let hour = d.getHours();
+    if (hour <= 13){
+        return `buongiorno ${string}`
+    } else if (hour > 13 && hour <= 17) {
+        return `buon pomeriggio ${string}`
+    } else {
+        return `buonasera ${string}`
+    }
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+let greeting = myFunction(name);
+console.log(greeting);
 
-
+let greetingArrow = myFunctionArrow (name)
+console.log(greetingArrow);
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
